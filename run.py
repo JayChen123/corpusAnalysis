@@ -23,7 +23,7 @@ ADD_TIME = lambda: time.strftime("%Y-%m-%d %X")
 # app.register_blueprint(corpus, url_prefix='/corpus')
 
 
-@app.route("/corpus", methods=['POST'])
+@app.route("/corpus", methods=['GET', 'POST'])
 @app.route("/", methods=['GET', 'POST'])
 def corpus():
     ip_addr: str = request.remote_addr
